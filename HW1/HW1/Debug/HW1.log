@@ -1,3 +1,0 @@
-﻿  newSet.cpp
-c:\users\elwyn\documents\school\cs32\hw1\hw1\newset.cpp(65): warning C4715: 'Set::insert': not all control paths return a value
-  HW1.vcxproj -> C:\Users\elwyn\Documents\School\CS32\HW1\Debug\HW1.exe
