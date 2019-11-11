@@ -1,0 +1,4 @@
+﻿  list.cpp
+c:\users\elwyn\documents\school\cs32\hw4\hw4q3\hw4q3\list.cpp(40): warning C4018: '<': signed/unsigned mismatch
+c:\users\elwyn\documents\school\cs32\hw4\hw4q3\hw4q3\list.cpp(58): warning C4018: '<': signed/unsigned mismatch
+  HW4Q3.vcxproj -> C:\Users\elwyn\Documents\School\CS32\HW4\HW4Q3\Debug\HW4Q3.exe

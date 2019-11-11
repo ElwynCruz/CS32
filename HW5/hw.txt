@@ -1,0 +1,97 @@
+1a.) 				 50
+			   /	        \
+                          20             60
+		        /     \            \
+              	     10         40         70
+		      \		/         /   \
+                       15     30	65    80
+			      / \              /
+			    25	38	     72
+
+
+1b.) In Order: 10 15 20 25 30 38 40 50 60 65 70 72 80
+     Pre-Order: 50 20 10 15 40 30 25 38 60 70 65 80 72
+     Post-Order: 15 10 25 38 30 40 20 65 72 80 70 60 50
+
+1c.)  				 50
+			     /	        \
+                          15             60
+		        /     \            \
+              	     10         40         70
+		      		/         /   \
+                              38	65    80
+			      /               /
+			    25		     72
+
+2a.)
+struct BinaryTreeNodeWithParentPointer
+{
+    int value;
+    BinaryTreeNodeWithParentPointer *left; 
+    BinaryTreeNodeWithParentPointer *right; 
+    BinaryTreeNodeWithParentPointer *parent;
+};
+
+
+2b.) 
+BinarySearchTree::insert(BinaryTreeNodeWithParentPointer* root, int v)
+{
+    If the tree is empty
+	Allocate a new node and put V into it
+	Set parent, left, right pointers to null
+	Point the root pointer to our new node. Return
+
+    Start at the root of the tree
+    While we’re not done...
+	If v is equal to current node's value, return
+	If v is greater than current node’s value
+	    If there is a right child, set current node to right child
+	    else
+		allocate a new node, put v into it's value
+		set current node's right pointer to the new node
+		set new node's parent pointer to the current node, return
+	If v is less than current node's value
+	    If there is a left child, set current node to left child
+	    else
+		allocate a new node, put v into it's value
+		set current node's left pointer to the new node
+		set new node's parent pointer to the current node, return
+
+}
+
+
+
+
+
+
+
+3a.)  				 7
+		               /    \
+			    3        6
+                          /   \     /
+                        0      2   4	
+
+
+3b.) a[0]: 7
+     a[1]: 3
+     a[2]: 6
+     a[3]: 0
+     a[4]: 2
+     a[5]: 4
+
+3c.) a[0]: 6
+     a[1]: 3
+     a[2]: 4
+     a[3]: 0
+     a[4]: 2
+
+
+
+4a.) O(C + S)
+b.) O(logC+S)
+c.) O(logC + logS)
+d.) O(logS)
+e.) O(1)
+f.) O(logC + S)
+g.) O(SlogS)
+h.) O(C*logS)

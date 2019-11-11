@@ -1,0 +1,16 @@
+﻿  GenomeMatcher.cpp
+c:\users\elwyn\documents\school\cs32\project4\gee-nomics\gee-nomics\genomematcher.cpp(74): warning C4018: '<': signed/unsigned mismatch
+c:\users\elwyn\documents\school\cs32\project4\gee-nomics\gee-nomics\genomematcher.cpp(161): warning C4018: '<': signed/unsigned mismatch
+c:\users\elwyn\documents\school\cs32\project4\gee-nomics\gee-nomics\trie.h(31): warning C4018: '<': signed/unsigned mismatch
+  c:\users\elwyn\documents\school\cs32\project4\gee-nomics\gee-nomics\trie.h(29): note: while compiling class template member function 'void Trie<GenomeMatcherImpl::DNAStrand>::insert(const std::string &,const ValueType &)'
+          with
+          [
+              ValueType=GenomeMatcherImpl::DNAStrand
+          ]
+  c:\users\elwyn\documents\school\cs32\project4\gee-nomics\gee-nomics\genomematcher.cpp(61): note: see reference to function template instantiation 'void Trie<GenomeMatcherImpl::DNAStrand>::insert(const std::string &,const ValueType &)' being compiled
+          with
+          [
+              ValueType=GenomeMatcherImpl::DNAStrand
+          ]
+  c:\users\elwyn\documents\school\cs32\project4\gee-nomics\gee-nomics\genomematcher.cpp(31): note: see reference to class template instantiation 'Trie<GenomeMatcherImpl::DNAStrand>' being compiled
+  Project4.vcxproj -> C:\Users\elwyn\Documents\School\CS32\Project4\Debug\Project4.exe

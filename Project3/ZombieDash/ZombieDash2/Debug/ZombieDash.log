@@ -1,0 +1,6 @@
+﻿  StudentWorld.cpp
+c:\users\elwyn\documents\school\cs32\project3\zombiedash\zombiedash\studentworld.cpp(118): warning C4018: '<': signed/unsigned mismatch
+c:\users\elwyn\documents\school\cs32\project3\zombiedash\zombiedash\studentworld.cpp(180): warning C4018: '<': signed/unsigned mismatch
+c:\users\elwyn\documents\school\cs32\project3\zombiedash\zombiedash\studentworld.cpp(224): warning C4018: '<': signed/unsigned mismatch
+c:\users\elwyn\documents\school\cs32\project3\zombiedash\zombiedash\studentworld.cpp(237): warning C4018: '<': signed/unsigned mismatch
+  ZombieDash.vcxproj -> C:\Users\elwyn\Documents\School\CS32\Project3\ZombieDash\Debug\ZombieDash.exe

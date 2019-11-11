@@ -1,0 +1,11 @@
+Classes:
+
+
+
+							Actor
+
+		Terrain				Goodies					Characters		
+
+	Walls	Exit	Deadly		Gas Can	 Vaccine  Landmine		Human			Zombie
+
+		  Fire   Vomit	Pit	 				    Penelope  Citizen	     Dumb	Smart

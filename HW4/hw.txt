@@ -1,0 +1,18 @@
+2.) The nodes in our set have a variable m_value of type ItemType. Because insert uses "p->m_value == value" and calls the function findFirstAtLeast, which uses "p->m_value < value", then ItemType must have an operator== and an operator< defined for it, which our Coord class does not have defined.
+
+3b.) We could not solve it recursively using the one parameter listAll since we would need a way to access the path we were currently at, so the only way to do it using the one parameter would be to use a global variable that way each call could modify that global variable and have access to it. Without it, there's no way to build up the path name.
+
+4a.) This has a time complexity of O(N^3) since the innermost for loop will run N times per run of the middle for loop, which itself will run N times per run of the outermost for loop, for a total of N^3 runs.
+
+4b.) This still has a time complexity of O(N^3) since the middle loop will run a max of N-1 times when i is N-1 , it is still essentially N times, resulting in once again a total of N^3 total runs.
+
+5a.) The for loop in this function runs a maximum of N times. However, each loop runs the insert function, which iterates through the list one node at a time looking for the first node with a value greater than our node. Therefore, the worst case scenario would be if every node we inserted was greater than all other node's values, for a time complexity of O(N^2).
+
+5b.) The time complexity is O(N log N) since each of the for loops has a time complexity of O(N), while the sort has a time complexity of O(N log N), making it the highest time complexity.
+
+5c.) This has a time complexity of O(N) since the while loop runs 2N times at max, and the bottom for loop runs a max of N times, so the total time complexity is O(N).
+
+
+
+
+ 

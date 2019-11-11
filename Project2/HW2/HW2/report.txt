@@ -1,0 +1,135 @@
+Elwyn Cruz
+104977892
+
+For my doubly-linked list, I implemented it using a head and tail pointer to point to the first and last nodes in my list. I then created a SetNode struct that held a value, a pointer to the previous node, and a pointer to the next node. The list is not circular and does not use dummy nodes. The order I keep my list in is the exact order each item is inserted (when inserting I always add to the tail of the list).
+
+Typical Set:					Empty Set:
+
+[null]						tail -> [null] <- head
+  ^
+  |
+[node1]	<- head
+  ^ |
+  | v
+[node2]
+  ^ |
+  | v
+[node3]
+  ^ |
+  | v
+[node4] <- tail
+    |
+    v
+[null]
+
+
+Pseudocode:
+
+operator=:
+loop through to get rid of all nodes in list
+loop to insert each node from other list
+
+insert:
+if no items in our list
+{
+	store value in node
+	point head and tail at node to insert
+	point node next and previous to null
+}
+else
+{
+	store value in node
+	insert at tail
+	change previous node's next to new node
+	change tail to new node
+}
+
+erase:
+loop until you find node to delete
+
+if node isn't the head
+	change previous node's next to point to node to delete's next
+if node isn't the tail
+	change next node's previous to point to node to delete's previous
+if node is head
+	change head to next node
+if node is tail
+	change tail to previous node
+delete node
+
+get:
+start at head
+while we haven't reached the end of our linked list
+{
+	while we haven't reach the end of our linked list
+	{
+		if outer node value > inner node value
+			increment number greater than
+	}
+	
+	if we've found node value greater than pos items
+		value = node value
+}
+
+swap:
+temp head, temp tail, temp size
+switch current and other value using temp value
+
+unite:
+make a temp Set
+while we haven't inserted everything from s1
+{
+	get xth item from s1
+	insert item into temp set
+}
+while we haven't inserted everything from s2
+{
+	get xth item from s2
+	insert item into temp set
+}
+result = temp set
+
+subtract:
+make a copy of Set s1
+while we haven't gone through all the items in s2
+{
+	get xth item from s2
+	try to erase current item from copy of s1
+}
+result = copy of s1
+
+Testing:
+
+        Set ss;  // ItemType is std::string, default constructor
+	ss.insert("ccc");		      // test insert
+	ss.insert("aaa");
+	ss.insert("bbb");
+	ItemType x = "xxx";
+	assert(!ss.get(3, x) && x == "xxx");  // x is unchanged
+	assert(ss.get(1, x) && x == "bbb");   // "bbb" is greater than
+					      // exactly 1 item
+	assert(ss.size() == 3);		      // test size
+	assert(ss.contains("ccc") == true);   // test contains
+	ss.erase("ccc");		      // test erase
+	assert(ss.get(0, x) && x == "aaa");   // test to make sure
+	assert(ss.get(1, x) && x == "bbb");   // other values are unaffected by erase
+	Set cc;
+	cc.insert("lol");
+	ss.swap(cc);			      // test swap
+	assert(ss.size() == 1);		      // make sure it swaps size too
+	assert(ss.get(0, x) && x == "lol");   // make sure value is swapped
+	ss.erase("lol");		      // test erase on list of size 1
+	assert(ss.empty());		      // test empty
+	ss.insert("aaa");
+	ss.insert("bbb");
+	subtract(ss, cc, ss);		      // test subtract, works when result is same as s1
+	assert(ss.empty());
+	ss.insert("ddd");			
+	ss.insert("ccc");
+	unite(ss, cc, ss);		      // test unite, works when result is same as s1
+	assert(ss.get(3, x) && x == "ddd");
+	assert(!ss.erase("roti"));	       // does nothing if not found
+	cc = ss;			      // test assignment operator
+	assert(cc.get(3, x) && x == "ddd");
+	Set ll = ss;				// test copy constructor
+	assert(ll.get(1, x) && x == "bbb");
